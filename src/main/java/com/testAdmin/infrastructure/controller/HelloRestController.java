@@ -1,16 +1,18 @@
-package com.testAdmin;
+package com.testAdmin.infrastructure.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.testAdmin.infrastructure.dao.HelloDao;
 import com.testAdmin.domain.entity.Hello;
 
-@RestController
+@Controller
 public class HelloRestController {
 	@Autowired
 	private HelloDao helloDao;
@@ -27,8 +29,16 @@ public class HelloRestController {
 		return helloList;
 	}
 	
+	/*
 	@RequestMapping("/")
 	public String index()  {
 		return "Hello World!!!!!!";
+	}
+	*/
+	
+	@RequestMapping("/hello")
+	public String index()  {
+		//model.addAttribute("name", "SpringBoot test Administrator");
+		return "hello";
 	}
 }
