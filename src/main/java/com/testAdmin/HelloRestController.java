@@ -7,9 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.domain.entity.Hello;
-import com.infrastructure.dao.HelloDao;
+import com.testAdmin.infrastructure.dao.HelloDao;
+import com.testAdmin.domain.entity.Hello;
 
 @RestController
 public class HelloRestController {
@@ -27,7 +26,6 @@ public class HelloRestController {
 		List<Hello> helloList = helloDao.findAll();
 		return helloList;
 	}
-	
 	
 	@RequestMapping("/")
 	public String index()  {

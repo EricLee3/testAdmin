@@ -1,4 +1,4 @@
-package com.domain.entity;
+package com.testAdmin.domain.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

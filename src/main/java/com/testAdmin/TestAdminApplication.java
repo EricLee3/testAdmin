@@ -9,4 +9,6 @@ public class TestAdminApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TestAdminApplication.class, args);
 	}
+	
+	
 }
