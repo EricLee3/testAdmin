@@ -30,11 +30,7 @@ public class HelloRestController {
 	}
 	
 	
-	@RequestMapping("/")
-	public String index1()  {
-		return "../index";
-		//return "Hello World!!!!!!";
-	}
+	
 	
 	
 	@RequestMapping("/hello")
