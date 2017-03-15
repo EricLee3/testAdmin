@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @Controller
-public class adminMain {
+public class adminMainCont {
 	@RequestMapping({"/", "index"})
 	public String index()  {
 		return "../index";
