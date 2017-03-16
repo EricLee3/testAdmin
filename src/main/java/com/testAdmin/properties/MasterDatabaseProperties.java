@@ -6,7 +6,7 @@ import lombok.Data;
 @ConfigurationProperties(prefix=MasterDatabaseProperties.PREFIX)
 @Data
 public class MasterDatabaseProperties implements DatabaseProperties {
-	public static final String PREFIX="datasource.master";
+	public static final String PREFIX="datasource";
 	
 	private String driverClassName;
 	
