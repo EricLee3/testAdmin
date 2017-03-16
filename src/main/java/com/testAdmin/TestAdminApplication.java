@@ -17,14 +17,9 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 @ComponentScan(basePackages="com.testAdmin")
 */
 @SpringBootApplication
-public class TestAdminApplication extends SpringBootServletInitializer {
+public class TestAdminApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TestAdminApplication.class, args);
 	}
-	
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application)  {
-		return application.sources(TestAdminApplication.class);
-	}	
 }

@@ -308,7 +308,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/photo4.png" class="img-circle" alt="User Image">
+          <img src="dist/img/photo4.PNG" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>testAdmin User</p>
@@ -1018,7 +1018,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 0.0.1
     </div>
-    <strong>Copyright &copy; 2014-2016
+    <strong>Copyright &copy; 2017-2019
     <!-- 
      <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.
     -->
