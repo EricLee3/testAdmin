@@ -10,6 +10,8 @@ public class DbService {
 	@Autowired
 	DbMapper dbMapper;
 	
+	// needed to get a meaning of this annotation 
+	// @Transactional(propagation=Propagation.REQUIRED, rollbackFor={Exception.class})
 	public String getDual() throws Exception  {
 		return dbMapper.getDual();
 	}
