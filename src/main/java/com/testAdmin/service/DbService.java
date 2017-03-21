@@ -15,4 +15,8 @@ public class DbService {
 	public String getDual() throws Exception  {
 		return dbMapper.getDual();
 	}
+	
+	public String getTodayOutbound() throws Exception {
+		return dbMapper.getTodayOutbound();
+	}
 }

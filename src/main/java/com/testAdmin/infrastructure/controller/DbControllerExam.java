@@ -16,4 +16,8 @@ public class DbControllerExam {
 	public @ResponseBody String now() throws Exception  {
 		return dbService.getDual();
 	}
+	
+	public String getTodayOutbound() throws Exception  {
+		return dbService.getTodayOutbound();
+	}
 }
