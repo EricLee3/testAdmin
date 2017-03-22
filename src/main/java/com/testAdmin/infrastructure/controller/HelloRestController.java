@@ -36,7 +36,7 @@ public class HelloRestController {
 	}
 	*/
 	
-	@RequestMapping("/hello")
+	@RequestMapping({"/", "/hello1"})
 	public String index()  {
 		//model.addAttribute("name", "SpringBoot test Administrator");
 		return "hello";
