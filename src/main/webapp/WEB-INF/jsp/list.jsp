@@ -57,7 +57,7 @@
 					<div class="site-heading">
 						<h1>Spring Blog</h1>
 						<hr class="small">
-						<span class="subheading">Spring Blog form Millky</span>
+						<span class="subheading">Spring Blog form psyche</span>
 					</div>
 				</div>
 			</div>
