@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /*
@@ -17,6 +17,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 @ComponentScan(basePackages="com.testAdmin")
 */
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class TestAdminApplication  {
 
 	public static void main(String[] args) {
