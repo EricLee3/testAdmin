@@ -2,7 +2,7 @@ package com.testAdmin.repository;
 
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
-import com.testAdmin.repository.entity.Users;
+import com.testAdmin.repository.entity.TUsers;
 import lombok.Getter;
 
 
@@ -12,7 +12,7 @@ public class LoginUserDetails extends User {
 	@Getter
 	private long no;
 	
-	public LoginUserDetails(Users users)  {
+	public LoginUserDetails(TUsers users)  {
 		super(users.getAc(), users.getPw(), AuthorityUtils.createAuthorityList(users.getRole()));
 		no = users.getNo();
 	}

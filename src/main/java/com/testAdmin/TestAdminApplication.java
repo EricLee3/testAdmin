@@ -16,8 +16,9 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 @EnableAutoConfiguration(exclude={DataSourceTransactionManagerAutoConfiguration.class, DataSourceAutoConfiguration.class})
 @ComponentScan(basePackages="com.testAdmin")
 */
-@SpringBootApplication
+
 @EnableAspectJAutoProxy
+@SpringBootApplication
 public class TestAdminApplication  {
 
 	public static void main(String[] args) {

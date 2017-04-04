@@ -18,7 +18,7 @@ import lombok.ToString;
 @Table(name="users")
 @Data @Getter @Setter
 @ToString
-public class Users {
+public class TUsers {
 	@Id
 	@SequenceGenerator(name="seq", sequenceName="users_no_seq", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
