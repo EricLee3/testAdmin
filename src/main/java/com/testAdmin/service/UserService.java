@@ -1,26 +1,12 @@
 package com.testAdmin.service;
 
-import java.util.List;
+import java.util.Collection;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.testAdmin.dao.UserMapper;
-import com.testAdmin.repository.entity.User;
 
-@Service
-public class UserService {
-	@Autowired
-	UserMapper userMapper;
-	
-	// needed to get a meaning of this annotation 
-	// @Transactional(propagation=Propagation.REQUIRED, rollbackFor={Exception.class})
-	public User readUser(String username) throws Exception  {
-		return userMapper.readUser(username);
-	}
-	
-	public List<String> readAuthority(String username) throws Exception {
-		return userMapper.readAuthority(username);
-	}
+public interface UserService extends UserDetailsService  {
+	Collection<GrantedAuthority> getAuthorities(String username);
 }
 
