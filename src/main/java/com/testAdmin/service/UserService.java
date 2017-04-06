@@ -1,17 +1,11 @@
 package com.testAdmin.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import java.util.Collection;
 
-import com.testAdmin.dao.TUsersRepository;
-import com.testAdmin.repository.entity.TUsers;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-@Component
-public class UserService {
-	@Autowired
-	private TUsersRepository usersRepository;
-	
-	public TUsers getAccount(String ac)  {
-		return usersRepository.findOneByAc(ac);
-	}
+
+public interface UserService extends UserDetailsService  {
+	Collection<GrantedAuthority> getAuthorities(String username);
 }
