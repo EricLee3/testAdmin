@@ -23,7 +23,7 @@ public class adminMainCont {
 	
 	@Autowired
 	User user;
-	
+
 	@RequestMapping({"/", "index"})
 	public String index(Model model)  {
 		try {
