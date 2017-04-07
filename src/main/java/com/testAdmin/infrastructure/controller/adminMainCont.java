@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.testAdmin.repository.entity.User;
 import com.testAdmin.service.DbService;
 
 import org.slf4j.Logger;
@@ -19,6 +20,9 @@ public class adminMainCont {
 	
 	@Autowired
 	DbService dbService;
+	
+	@Autowired
+	User user;
 	
 	@RequestMapping({"/", "index"})
 	public String index(Model model)  {
