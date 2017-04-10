@@ -1,11 +1,15 @@
 package com.testAdmin.infrastructure.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.testAdmin.dao.UserMapper;
 import com.testAdmin.repository.entity.User;
 import com.testAdmin.service.DbService;
 
@@ -21,12 +25,15 @@ public class adminMainCont {
 	@Autowired
 	DbService dbService;
 	
-	@Autowired
-	User user;
-
 	@RequestMapping({"/", "index"})
 	public String index(Model model)  {
 		try {
+			// Login user name 
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			String userName = auth.getName();
+			model.addAttribute("userName", userName);
+			
+			// outbound No for Linegraph 
 			String strTodayOutbound = dbService.getTodayOutbound();
 			model.addAttribute("todayOutbound", strTodayOutbound);
 			logger.debug("Loading debug example logger "+ strTodayOutbound);

@@ -252,7 +252,10 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">adminUser Sample</span>
+<!--               <span class="hidden-xs">adminUser Sample</span> -->
+				<span class = "hidden-xs">
+					<c:out value="${userName}" escapeXml="true"></c:out>
+				</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -309,7 +312,8 @@
           <img src="dist/img/photo4.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>testAdmin User</p>
+          <!-- <p>testAdmin User</p> -->
+          <c:out value="${userName}" escapeXml="true"></c:out>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
