@@ -41,4 +41,9 @@ public class adminMainCont {
 		}
 		return "../index";
 	}
+	
+	@RequestMapping({"test"})
+	public String test(Model model)  {
+		return "chartjs2";
+	}
 }
