@@ -21,11 +21,11 @@ public class adminMainCont {
 	@Autowired
 	DbService dbService;
 	
-	@Autowired
-	User user;
+//	@Autowired
+//	User user;
 
 	@RequestMapping({"/", "index"})
-	public String index(Model model)  {
+	public String index(Model model, User user)  {
 		try {
 			String strTodayOutbound = dbService.getTodayOutbound();
 			model.addAttribute("todayOutbound", strTodayOutbound);
