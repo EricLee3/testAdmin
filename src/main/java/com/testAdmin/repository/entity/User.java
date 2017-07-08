@@ -1,54 +1,92 @@
 package com.testAdmin.repository.entity;
 
-public class User {
+import java.util.Collection;
 
-	private Long id;
-	
-	private String userName;
-	
-	private String password;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-	@Override
-	public boolean equals(Object other) {
-		if (other != null && other instanceof User) {
-			if (((User) other).getId() == this.id) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	@Override
-	public int hashCode() {
-		return (userName == null ? userName.length() : 0);
-	}
-	
-	@Override
-	public String toString() {
-		return "id[" + id +"] userName[" + userName + "]";
-	}
+public class User implements UserDetails {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9132245394174272990L;
+	private String username;
+    private String password;
+    private String name;
+    private boolean isAccountNonExpired;
+    private boolean isAccountNonLocked;
+    private boolean isCredentialsNonExpired;
+    private boolean isEnabled;
+    private Collection<? extends GrantedAuthority> authorities;
+    
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+         return authorities;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    @Override
+    public String getPassword() {
+         return password;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	public String getUserName() {
-		return userName;
-	}
-	
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    @Override
+    public String getUsername() {
+         return username;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    @Override
+    public boolean isAccountNonExpired() {
+         return isAccountNonExpired;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    @Override
+    public boolean isAccountNonLocked() {
+         return isAccountNonLocked;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+         return isCredentialsNonExpired;
+    }
+
+    @Override
+    public boolean isEnabled() {
+         return isEnabled;
+    }
+
+    public String getName() {
+         return name;
+    }
+
+    public void setName(String name) {
+         this.name = name;
+    }
+
+    public void setUsername(String username) {
+         this.username = username;
+    }
+
+    public void setPassword(String password) {
+         this.password = password;
+    }
+
+    public void setAccountNonExpired(boolean isAccountNonExpired) {
+         this.isAccountNonExpired = isAccountNonExpired;
+    }
+
+    public void setAccountNonLocked(boolean isAccountNonLocked) {
+         this.isAccountNonLocked = isAccountNonLocked;
+    }
+
+    public void setCredentialsNonExpired(boolean isCredentialsNonExpired) {
+         this.isCredentialsNonExpired = isCredentialsNonExpired;
+    }
+
+    public void setEnabled(boolean isEnabled) {
+         this.isEnabled = isEnabled;
+    }
+
+    public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
+         this.authorities = authorities;
+    }
 }

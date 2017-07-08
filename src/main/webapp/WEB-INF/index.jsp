@@ -45,7 +45,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -252,7 +252,10 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">adminUser Sample</span>
+<!--               <span class="hidden-xs">adminUser Sample</span> -->
+				<span class = "hidden-xs">
+					<c:out value="${userName}" escapeXml="true"></c:out>
+				</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -299,6 +302,10 @@
       </div>
     </nav>
   </header>
+  
+  
+  
+  <!-- Left menu IOS -->
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -309,7 +316,8 @@
           <img src="dist/img/photo4.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>testAdmin User</p>
+          <!-- <p>testAdmin User</p> -->
+          <c:out value="${userName}" escapeXml="true"></c:out>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -370,10 +378,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li><a href="pages/charts/chartjs.html?userName=${userName}"><i class="fa fa-circle-o"></i> ChartJS</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+<!--             <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> -->
+            <li><a href="test"><i class="fa fa-circle-o"></i> test</a></li>
           </ul>
         </li>
         <li class="treeview">
